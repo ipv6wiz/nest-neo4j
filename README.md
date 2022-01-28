@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://kamilmysliwiec.com/public/nest-logo.png#1" alt="Nest Logo" />   </a>
+  <a href="https://nestjs.com/" target="blank"><img src="https://kamilmysliwiec.com/public/nest-logo.png#1" alt="Nest Logo" />   </a>
   <a href="https://neo4j.com" target="_blank"><img src="https://dist.neo4j.com/wp-content/uploads/20140926224303/neo4j_logo-facebook.png" width="380"></a>
 </p>
 
@@ -9,12 +9,15 @@
 
 ## Description
 
-This repository provides [Neo4j](https://www.neo4j.com) integration for [Nest](http://nestjs.com/).
+This repository provides [Neo4j](https://www.neo4j.com) integration for [Nest](http://nestjs.com/).  
+Forked from Adam Cowley's project at https://www.npmjs.com/package/nest-neo4j  
+Cleaned up the dependencies, now builds without errors or warnings
+
 
 ## Installation
 
 ```
-$ npm i --save nest-neo4j
+$ npm i --save nest-neo4j-mmci
 ```
 
 ## Quick Start
@@ -25,7 +28,7 @@ Register the Neo4j Module in your application using the `forRoot` method, passin
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Neo4jModule } from 'nest-neo4j'
+import { Neo4jModule } from 'nest-neo4j-mmci'
 
 @Module({
   imports: [
@@ -48,7 +51,7 @@ export class AppModule {}
 The `Neo4jService` is `@Injectable`, so can be passed into any constructor:
 
 ```ts
-import { Neo4jService } from 'nest-neo4j'
+import { Neo4jService } from 'nest-neo4j-mmci'
 
 @Controller()
 export class AppController {
